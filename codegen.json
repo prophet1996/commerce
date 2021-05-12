@@ -1,23 +1,19 @@
 {
   "schema": {
-    "https://buybutton.store/graphql": {
-      "headers": {
-        "Authorization": "Bearer xzy"
-      }
-    }
+    "./frameowrk/strapi/schema.graphql": {}
   },
   "documents": [
     {
-      "./framework/bigcommerce/api/**/*.ts": {
+      "./framework/strapi/api/**/*.ts": {
         "noRequire": true
       }
     }
   ],
   "generates": {
-    "./framework/bigcommerce/schema.d.ts": {
+    "./framework/strapi/schema.d.ts": {
       "plugins": ["typescript", "typescript-operations"]
     },
-    "./framework/bigcommerce/schema.graphql": {
+    "./framework/strapi/schema.graphql": {
       "plugins": ["schema-ast"]
     }
   },

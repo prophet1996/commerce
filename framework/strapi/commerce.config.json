@@ -1,0 +1,6 @@
+{
+  "provider": "strapi",
+  "features": {
+    "wishlist": false
+  }
+}

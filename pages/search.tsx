@@ -69,9 +69,8 @@ export default function Search({
   const activeCategory = categories.find(
     (cat) => getSlug(cat.path) === category
   )
-  const activeBrand = brands.find(
-    (b) => getSlug(b.node.path) === `brands/${brand}`
-  )?.node
+  const activeBrand = brands.find((b) => getSlug(b.path) === `brands/${brand}`)
+    ?.node
 
   const { data } = useSearch({
     search: typeof q === 'string' ? q : '',
@@ -260,7 +259,7 @@ export default function Search({
                         </a>
                       </Link>
                     </li>
-                    {brands.flatMap(({ node }) => (
+                    {brands.flatMap((node) => (
                       <li
                         key={node.path}
                         className={cn(
